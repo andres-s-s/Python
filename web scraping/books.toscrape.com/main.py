@@ -38,7 +38,7 @@ def book(link, category):
         
         try:
             title = parse_home.xpath(XPATH_TITLE)[0]
-            stock = parse_home.xpath(XPATH_STOCK)[1].strip()
+            stock = parse_home.xpath(XPATH_STOCK)[1]
             summary = parse_home.xpath(XPATH_SUMMARY)[0]
             price = parse_home.xpath(XPATH_PRICE)[0]
             #print(f'{title} \n {stock} \n {summary} \n {price}')
@@ -48,9 +48,9 @@ def book(link, category):
             return
 
         with open(f'{category}/{title}.txt', 'w', encoding='UTF-8') as f:
-            f.write(f'{title} \n \n  ')
-            f.write(f'stock:{stock} , price:{price} \n \n \n ')
-            f.write(f'{summary} \n \n \n ')
+            f.write(f'{title} \n \n')
+            f.write(f'stock:{stock} , price:{price} \n \n \n')
+            f.write(f'{summary} \n \n \n')
 
           
                          
