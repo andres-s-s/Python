@@ -71,13 +71,11 @@ def run():
 
 
 
+    os.system("clear")
+    print(f'{intentos(errores)}   \n \n \n  ')
     if palabra == string_palabra_oculta:
-        os.system("clear")
-        print(f'{intentos(errores)}   \n \n \n  ')
         print(f'Felicidades la palabra  {string_palabra_oculta} es correcta')
     else:
-        os.system("clear")
-        print(intentos(errores))
         print(f'La palabra era  {palabra}')
 
 
